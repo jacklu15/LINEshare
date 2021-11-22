@@ -62,10 +62,10 @@
 	     if($(this).text()) {
 	       if(code == 'TEST') {
 	         message = $(this).text()
-	       }
 	     } else {
 	       message = "https://txp.rs/LinePointVoucher/LinePointRedeemEventEntry?pa=" + $(this).text()
 	     }
+	   }
 
 	     if (liff.isApiAvailable('shareTargetPicker')) {
 	       liff.shareTargetPicker([
