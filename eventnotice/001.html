@@ -26,8 +26,11 @@
             <p></p>
             <p align="center"><font size="3">筍伯♪｜2022 跨年新春活動</font></p>
          </div></div></div><font size="3">
+
+
+
    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> 
-   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> 
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
    <script type="text/javascript">
       $(document).ready(function() {
          liff.init({liffId: "1656185375-Mp62g5Jw"}).then(() => {
@@ -43,12 +46,12 @@
 	   $('button').on('click', function() {
 	     let message;
 	     if($(this).text()) {
-	       if(code == undefined) {
-	         message = "個人驗證碼：" + $(this).text()
-	       }
+	       if(code == 'TEST') {
+	         message = $(this).text()
 	     } else {
-	       message = $(this).text()
+	       message = "https://" + $(this).text()
 	     }
+	   }
 
 	     if (liff.isApiAvailable('shareTargetPicker')) {
 	       liff.shareTargetPicker([
