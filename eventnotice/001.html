@@ -43,22 +43,14 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-      const loginPromise = (async () => {
-      await liff.init({ liffId: '1656185375-Mp62g5Jw' })
-      if (window.getSearchParam('liff.state')) await new Promise(resolve => {}) 
-      if (!liff.isLoggedIn()) {
-        liff.login({ redirectUri: location.href })
-        await new Promise(resolve => {}) 
+      async function main() {
+      await liff.init({ liffId: "1656185375-Mp62g5Jw" })
+      if (liff.isLoggedIn()) {
+        getUserProfile()
+      } else {
+        liff.login({ redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/001"})
       }
-      let profile = {}
-      try {
-        profile = await liff.getProfile()
-      } catch (err) {
-        window.logError({ err })
-      }
-      window.gtagInit(profile.userId)
-      return profile
-    })()
+    }
 
     let code;
 
@@ -162,8 +154,7 @@
         ).catch(function(res) {
           
         })
-      } 
-      else {
+      } else {
         alert("你的 LINE App 暫時不支援 Share Target Picker ，將開啟外部瀏覽器。")
         liff.openWindow({
           url: "https://jacklu15.github.io/LINEshare/eventnotice/001",
