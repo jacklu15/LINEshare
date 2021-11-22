@@ -1,1 +1,50 @@
-3
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Flex 訊息分享1(REWARD)</title>
+  <meta name="description" content="Flex 訊息分享1(REWARD)">
+  <meta name="keywords" content="">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Jack Lu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta http-equiv="ImageToolBar" content="NO"> 
+  <link rel="shortcut icon" href="https://i.imgur.com/VIbdVEb.png">
+  <link rel="apple-touch-icon" href="https://i.imgur.com/TtuTiTz.png">
+
+  </head>
+  <body>
+
+<div class="container mt-6">
+  <div class="row">
+   <form class="form-group">
+     <P Align=center><input name="sharedUrl" type="text" id="text" class="searchField form-control" /></form><br>
+   <div class="col-xs-12">
+     <P Align=center>
+       <button type="button" class="btn btn-success">FLEX Share Botton</button><br> 
+     <p><P Align=center><font size="3">筍伯♪｜2022 跨年新春活動</p> 
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script>
+    async function main() {
+      await liff.init({ liffId: "1656185375-Mp62g5Jw" })
+      if (liff.isLoggedIn()) {
+        getUserProfile()
+        document.getElementById("accessToken").append(liff.getAccessToken())
+      } else {
+        liff.login({ redirectUri: "https://mokmoon.com/liff1/path"})
+      }
+    }    
+  </script>
+
+  </body>
+</html>
