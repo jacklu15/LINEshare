@@ -48,7 +48,7 @@
          liff.init({liffId: "1656185375-Mp62g5Jw"}).then(() => {
 	       if (!liff.isInClient()) {
 	         if (!liff.isLoggedIn()) {
-	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/001"})
+	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/rewardnotice/001"})
 	         }
 	       }
 	     })
@@ -69,94 +69,77 @@
 	       liff.shareTargetPicker([
 	         {
 	         "type": "flex",
-	         "altText": "請點我，查看完整訊息",
+	         "altText": "恭喜你獲得獎項，查看完整訊息",
 	         "contents":
 
          {
-	 "type": "bubble",
-	 "hero": {
-	   "type": "image",
-	   "url": "https://i.imgur.com/LKVqfEU.jpg",
-	   "size": "full",
-	   "aspectRatio": "16:9",
-	   "aspectMode": "cover"
-	 },
-	 "body": {
-	   "type": "box",
-	   "layout": "vertical",
-	   "contents": [
-	     {
-	       "type": "text",
-	       "text": "筍伯♪｜2022 跨年新春活動",
-	       "size": "lg",
-	       "color": "#000000",
-	       "weight": "bold",
-	       "wrap": true
-	     },
-	     {
-	       "type": "box",
-	       "layout": "vertical",
-	       "contents": [
-	         {
-	           "type": "text",
-	           "color": "#6C6C6C",
-	           "wrap": true,
-	           "text": "您已符合活動資格，完成活動將有機會獲得星巴克、LINE POINTS等好禮！",
-	           "size": "sm"
-	         }
-	       ],
-	       "spacing": "xs"
-	     },
-	     {
-	       "type": "separator",
-	       "color": "#6C6C6C"
-	     },
-	     {
-	       "type": "text",
-	       "color": "#6C6C6C",
-	       "wrap": true,
-	       "text": "當您點選立即前往開始活動時，系統將依隱私權政策存取您的 LINE 內部識別碼。完整內容請參閱活動辦法。",
-	       "size": "xs"
-	     },
-	     {
-	       "type": "text",
-	       "color": "#4587ff",
-	       "text": "詳見活動辦法",
-	       "size": "sm",
-	       "margin": "sm",
-	       "action": {
-	         "type": "uri",
-	         "label": "action",
-	         "uri": "https://jack4215.github.io/article/event/ID007"
-	       }
-	     }
-	   ],
-	   "spacing": "lg"
-	 },
-	 "footer": {
-	   "type": "box",
-	   "layout": "vertical",
-	   "contents": [
-	     {
-	       "type": "button",
-	       "style": "primary",
-	       "action": {
-	         "type": "uri",
-	         "label": "立即前往",
-	         "uri": "https://liff.line.me/1656185375-gBk83qL0?liff_id=1656185375-gBk83qL0&form=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdRMyIc9Lwnf_YEGONEGf5oce3bXGpM5eYpwJSIeXZZCKiQmA%2Fviewform%3Fusp%3Dpp_url%26entry.832515349%3D*%257CNAME%257C*%26entry.1480857652%3D*%257CUID%257C*&utm_source=pvchat&utm_medium=songbo&utm_campaign=pvevent_songbo202112"
-	       },
-	       "color": "#192249"
-	     }
-	   ]
-	 }
-	}
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "筍伯♪｜2022 跨年新春活動",
+        "size": "lg",
+        "color": "#000000",
+        "weight": "bold",
+        "wrap": true
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "謝謝你參加 筍伯♪｜2022 跨年新春活動，恭喜你獲得 LINE POINTS 1 點。",
+            "color": "#000000",
+            "wrap": true
+          },
+          {
+            "type": "separator",
+            "margin": "lg",
+            "color": "#8E8E8E"
+          },
+          {
+            "type": "text",
+            "text": "• 入點服務由 Edenred 提供，請點擊下方按鈕領取點數。",
+            "wrap": true,
+            "margin": "md",
+            "size": "xs",
+            "color": "#6C6C6C"
+          }
+        ],
+        "spacing": "xs"
+      }
+    ],
+    "spacing": "lg"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "button",
+        "style": "primary",
+        "action": {
+          "type": "uri",
+          "label": "領取點數",
+          "uri": message
+        },
+        "flex": 1
+      }
+    ],
+    "spacing": "lg"
+  }
+}
          
   
 	        }]).then().catch(function(res) {})
 	     } else {
 	       alert("你的 LINE App 暫時不支援 Share Target Picker ，將開啟外部瀏覽器。")
 	       liff.openWindow({
-	         url: "https://jacklu15.github.io/LINEshare/eventnotice/001",
+	         url: "https://jacklu15.github.io/LINEshare/rewardnotice/001",
 	         external: true
 	       });
 	     }
