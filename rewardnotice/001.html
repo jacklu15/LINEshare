@@ -60,10 +60,10 @@
 	     let message;
 	     if($(this).text()) {
 	       if(code == undefined) {
-	         message = "個人驗證碼：" + $(this).text()
+	         message = $(this).text()
 	       }
 	     } else {
-	       message = $(this).text()
+	       message = "https://txp.rs/LinePointVoucher/LinePointRedeemEventEntry?pa=" + $(this).text()
 	     }
 
 	     if (liff.isApiAvailable('shareTargetPicker')) {
