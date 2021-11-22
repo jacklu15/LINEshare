@@ -33,24 +33,20 @@
 </div>
 
 
-  <script src="https://mokmoon.com/liff2/js/vconsole.min.js"></script>
-  <script>
-    var vConsole = new VConsole()
-    console.log("Current URL", window.location.href)
-  </script>
-
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-      async function main() {
-      await liff.init({ liffId: "1656185375-Mp62g5Jw" })
-      if (liff.isLoggedIn()) {
-        getUserProfile()
-      } else {
-        liff.login({ redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/001"})
-      }
-    }
+    liff.init({liffId: "1656185375-Mp62g5Jw"})
+      .then(() => {
+        if (!liff.isInClient()) {
+          if (!liff.isLoggedIn()) {
+            liff.login({
+              redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/001"
+            })
+          }
+        }
+      })
 
     let code;
 
