@@ -37,8 +37,22 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    
-    liff.init({liffId: "1656185375-Mp62g5Jw"});
+      const loginPromise = (async () => {
+      await liff.init({ liffId: '1656185375-Mp62g5Jw' })
+      if (window.getSearchParam('liff.state')) await new Promise(resolve => {}) 
+      if (!liff.isLoggedIn()) {
+        liff.login({ redirectUri: location.href })
+        await new Promise(resolve => {}) 
+      }
+      let profile = {}
+      try {
+        profile = await liff.getProfile()
+      } catch (err) {
+        window.logError({ err })
+      }
+      window.gtagInit(profile.userId)
+      return profile
+    })()
 
     let code;
 
