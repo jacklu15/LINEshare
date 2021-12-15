@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta content="ie=edge" http-equiv="x-ua-compatible">
+   <title>Flex 訊息分享1(REWARD)</title>
+   <meta content="Flex 訊息分享1(REWARD)" name="description">
+   <meta content="" name="keywords">
+   <meta content="noindex, nofollow" name="robots">
+   <meta content="Jack Lu" name="author">
+   <meta content="width=device-width, initial-scale=1" name="viewport">
+   <meta content="" property="og:title">
+   <meta content="" property="og:description">
+   <meta content="NO" http-equiv="ImageToolBar">
+   <link href="https://i.imgur.com/VIbdVEb.png" rel="shortcut icon">
+   <link href="https://i.imgur.com/TtuTiTz.png" rel="apple-touch-icon">
+</head>
+<body>
+   <div class="container mt-6">
+      <div class="row">
+         <form class="form-group">
+            <p align="center"><input class="searchField form-control" id="text" name="sharedUrl" type="text"></p>
+         </form><br>
+         <div class="col-xs-12">
+            <p align="center"><button class="btn btn-success" type="button">FLEX Share Botton</button><br></p>
+            <p></p>
+            <p align="center"><font size="3">筍伯♪｜2021 年終大感謝祭 (二次提醒)</font></p>
+         </div></div></div><font size="3">
+
+
+
+   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> 
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script type="text/javascript">
+      $(document).ready(function() {
+         liff.init({liffId: "1656185375-Mp62g5Jw"}).then(() => {
+	       if (!liff.isInClient()) {
+	         if (!liff.isLoggedIn()) {
+	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/001"})
+	         }
+	       }
+	     })
+
+	   let code;
+
+	   $('button').on('click', function() {
+	     let message;
+	     if($(this).text()) {
+	       if(code == 'TEST') {
+	         message = $(this).text()
+	     } else {
+	       message = "https://" + $(this).text()
+	     }
+	   }
+
+	     if (liff.isApiAvailable('shareTargetPicker')) {
+	       liff.shareTargetPicker([
+	         {
+	         "type": "flex",
+	         "altText": "請點我，查看完整訊息",
+	         "contents":
+
+         {
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "筍伯♪｜2021 年終大感謝祭",
+        "size": "lg",
+        "color": "#000000",
+        "weight": "bold",
+        "wrap": true
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "提醒您，筍伯♪｜2021 年終大感謝祭將於 2021-12-15 22:59 結束，目前尚未收到您的回覆，敬請把握開放時間。",
+            "color": "#000000",
+            "wrap": true
+          },
+          {
+            "type": "text",
+            "text": "*若已提交請忽略本則訊息",
+            "color": "#000000",
+            "wrap": true,
+            "margin": "md"
+          },
+          {
+            "type": "separator",
+            "margin": "lg",
+            "color": "#8E8E8E"
+          },
+          {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "text",
+                "color": "#6C6C6C",
+                "text": "• 活動詳情：",
+                "size": "xs",
+                "flex": 4,
+                "wrap": true
+              },
+              {
+                "type": "text",
+                "text": "https://reurl.cc/oxjME5",
+                "size": "xs",
+                "flex": 10,
+                "action": {
+                  "type": "uri",
+                  "label": "action",
+                  "uri": "https://jack4215.github.io/article/event/ID007"
+                },
+                "color": "#4587ff",
+                "wrap": true
+              }
+            ],
+            "margin": "md"
+          }
+        ],
+        "spacing": "xs"
+      }
+    ],
+    "spacing": "lg"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "button",
+        "style": "primary",
+        "action": {
+          "type": "uri",
+          "label": "立即前往",
+          "uri": "https://liff.line.me/1656185375-gBk83qL0?liff_id=1656185375-gBk83qL0&form=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdRMyIc9Lwnf_YEGONEGf5oce3bXGpM5eYpwJSIeXZZCKiQmA%2Fviewform%3Fusp%3Dpp_url%26entry.832515349%3D*%257CNAME%257C*%26entry.1480857652%3D*%257CUID%257C*&utm_source=pvchat&utm_medium=songbo&utm_campaign=pvevent_songbo202112"
+        },
+        "flex": 1
+      }
+    ],
+    "spacing": "lg"
+  }
+}
+         
+  
+	        }]).then().catch(function(res) {})
+	     } else {
+	       alert("你的 LINE App 暫時不支援 Share Target Picker ，將開啟外部瀏覽器。")
+	       liff.openWindow({
+	         url: "https://jacklu15.github.io/LINEshare/eventnotice/001",
+	         external: true
+	       });
+	     }
+	   });
+
+         function initVConsole() {
+            window.vConsole = new window.VConsole({
+               defaultPlugins: ['system', 'network', 'element', 'storage'],
+               maxLogNumber: 1000,
+               onReady: function() {
+                  console.log('vConsole is ready.');
+               },
+               onClearLog: function() {
+                  console.log('on clearLog');
+               }
+            });
+         }
+      })
+   </script></font>
+</body>
+</html>
