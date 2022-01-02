@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta content="ie=edge" http-equiv="x-ua-compatible">
+   <title>Flex 訊息分享1(REWARD)</title>
+   <meta content="Flex 訊息分享1(REWARD)" name="description">
+   <meta content="" name="keywords">
+   <meta content="noindex, nofollow" name="robots">
+   <meta content="Jack Lu" name="author">
+   <meta content="width=device-width, initial-scale=1" name="viewport">
+   <meta content="" property="og:title">
+   <meta content="" property="og:description">
+   <meta content="NO" http-equiv="ImageToolBar">
+   <link href="https://i.imgur.com/VIbdVEb.png" rel="shortcut icon">
+   <link href="https://i.imgur.com/TtuTiTz.png" rel="apple-touch-icon">
+</head>
+<body>
+   <div class="container mt-6">
+      <div class="row">
+         <form class="form-group">
+            <p align="center"><input class="searchField form-control" id="text" name="sharedUrl" type="text"></p>
+         </form><br>
+         <div class="col-xs-12">
+            <p align="center"><button class="btn btn-success" type="button">FLEX Share Botton</button><br></p>
+            <p></p>
+            <p align="center"><font size="3">測試</font></p>
+         </div></div></div><font size="3">
+
+
+
+   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> 
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script type="text/javascript">
+      $(document).ready(function() {
+         liff.init({liffId: "1656185375-Mp62g5Jw"}).then(() => {
+	       if (!liff.isInClient()) {
+	         if (!liff.isLoggedIn()) {
+	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/003"})
+	         }
+	       }
+	     })
+
+	   let code;
+
+	   $('button').on('click', function() {
+	     let message;
+	     if($(this).text()) {
+	       if(code == 'TEST') {
+	         message = $(this).text()
+	     } else {
+	       message = "https://" + $(this).text()
+	     }
+	   }
+
+	     if (liff.isApiAvailable('shareTargetPicker')) {
+	       liff.shareTargetPicker([
+	         {
+	         "type": "flex",
+	         "altText": "請點我，查看完整訊息",
+	         "contents":
+
+         {
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "2021 消費群夏祭問答",
+        "size": "lg",
+        "color": "#000000",
+        "weight": "bold",
+        "wrap": true
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "謝謝你參加 2021 消費群夏祭問答活動，恭喜你答對所有題目，獎品是 50 代幣貼圖一份。",
+            "color": "#000000",
+            "wrap": true
+          }
+        ],
+        "spacing": "xs"
+      }
+    ],
+    "spacing": "lg"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "horizontal",
+    "contents": [
+      {
+        "type": "button",
+        "style": "primary",
+        "action": {
+          "type": "message",
+          "label": "正確",
+          "text": "第一題：O"
+        }
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "message",
+          "label": "錯誤",
+          "text": "第一題：X"
+        },
+        "style": "primary",
+        "color": "#FF3333"
+      }
+    ],
+    "spacing": "lg"
+  }
+}
+         
+  
+	        }]).then().catch(function(res) {})
+	     } else {
+	       alert("你的 LINE App 暫時不支援 Share Target Picker ，將開啟外部瀏覽器。")
+	       liff.openWindow({
+	         url: "https://jacklu15.github.io/LINEshare/eventnotice/003",
+	         external: true
+	       });
+	     }
+	   });
+
+         function initVConsole() {
+            window.vConsole = new window.VConsole({
+               defaultPlugins: ['system', 'network', 'element', 'storage'],
+               maxLogNumber: 1000,
+               onReady: function() {
+                  console.log('vConsole is ready.');
+               },
+               onClearLog: function() {
+                  console.log('on clearLog');
+               }
+            });
+         }
+      })
+   </script></font>
+</body>
+</html>
