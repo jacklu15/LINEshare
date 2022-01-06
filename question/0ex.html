@@ -24,7 +24,7 @@
          <div class="col-xs-12">
             <p align="center"><button class="btn btn-success" type="button">FLEX Share Botton</button><br></p>
             <p></p>
-            <p align="center"><font size="3">測試 - 範例問題</font></p>
+            <p align="center"><font size="3">筍伯♪｜虎福臨門迎新年 (範例問題)</font></p>
          </div></div></div><font size="3">
 
 
@@ -36,7 +36,7 @@
          liff.init({liffId: "1656185375-Mp62g5Jw"}).then(() => {
 	       if (!liff.isInClient()) {
 	         if (!liff.isLoggedIn()) {
-	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/question/001"})
+	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/question/0ex"})
 	         }
 	       }
 	     })
@@ -57,7 +57,7 @@
 	       liff.shareTargetPicker([
 	         {
 	         "type": "flex",
-	         "altText": "請點我，查看完整訊息",
+	         "altText": "筍伯♪｜虎福臨門迎新年 (範例問題)",
 	         "contents":
 
          {
@@ -83,12 +83,34 @@
             "color": "#DDDDDD"
           },
           {
-            "type": "text",
-            "text": "範例問題：",
-            "style": "normal",
-            "weight": "bold",
-            "color": "#0066FF",
-            "size": "md",
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "範例問題",
+                    "color": "#ffffff",
+                    "size": "xs",
+                    "align": "center",
+                    "gravity": "center",
+                    "wrap": true,
+                    "offsetTop": "xs"
+                  }
+                ],
+                "backgroundColor": "#0066FF",
+                "cornerRadius": "12px",
+                "height": "24px"
+              },
+              {
+                "type": "filler",
+                "flex": 3
+              }
+            ],
+            "cornerRadius": "md",
             "margin": "lg"
           },
           {
@@ -117,17 +139,17 @@
         "type": "button",
         "style": "primary",
         "action": {
-          "type": "message",
+          "type": "uri",
           "label": "正確",
-          "text": "第一題：O"
+          "uri": "https://liff.line.me/1656185375-r7pz20GD/event/00a"
         }
       },
       {
         "type": "button",
         "action": {
-          "type": "message",
+          "type": "uri",
           "label": "錯誤",
-          "text": "第一題：X"
+          "uri": "https://liff.line.me/1656185375-r7pz20GD/event/00b"
         },
         "style": "primary",
         "color": "#F01111"
@@ -142,7 +164,7 @@
 	     } else {
 	       alert("你的 LINE App 暫時不支援 Share Target Picker ，將開啟外部瀏覽器。")
 	       liff.openWindow({
-	         url: "https://jacklu15.github.io/LINEshare/question/001",
+	         url: "https://jacklu15.github.io/LINEshare/question/0ex",
 	         external: true
 	       });
 	     }
