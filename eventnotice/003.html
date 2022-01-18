@@ -24,7 +24,7 @@
          <div class="col-xs-12">
             <p align="center"><button class="btn btn-success" type="button">FLEX Share Botton</button><br></p>
             <p></p>
-            <p align="center"><font size="3">測試</font></p>
+            <p align="center"><font size="3">筍伯♪｜虎福臨門迎新年</font></p>
          </div></div></div><font size="3">
 
 
@@ -36,7 +36,7 @@
          liff.init({liffId: "1656185375-Mp62g5Jw"}).then(() => {
 	       if (!liff.isInClient()) {
 	         if (!liff.isLoggedIn()) {
-	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/003"})
+	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/001"})
 	         }
 	       }
 	     })
@@ -60,15 +60,22 @@
 	         "altText": "請點我，查看完整訊息",
 	         "contents":
 
-         {
+        {
   "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://jack4215.github.io/article/photo/event00901.jpg",
+    "size": "full",
+    "aspectRatio": "16:9",
+    "aspectMode": "cover"
+  },
   "body": {
     "type": "box",
     "layout": "vertical",
     "contents": [
       {
         "type": "text",
-        "text": "2021 消費群夏祭問答",
+        "text": "筍伯♪｜虎福臨門迎新年",
         "size": "lg",
         "color": "#000000",
         "weight": "bold",
@@ -80,50 +87,64 @@
         "contents": [
           {
             "type": "text",
-            "text": "謝謝你參加 2021 消費群夏祭問答活動，恭喜你答對所有題目，獎品是 50 代幣貼圖一份。",
-            "color": "#000000",
-            "wrap": true
+            "color": "#6C6C6C",
+            "wrap": true,
+            "text": "您已符合活動資格，完成活動將有機會獲得一卡通 Money 紅包、LINE POINTS 等好禮！",
+            "size": "sm"
           }
         ],
         "spacing": "xs"
+      },
+      {
+        "type": "separator",
+        "color": "#6C6C6C"
+      },
+      {
+        "type": "text",
+        "color": "#6C6C6C",
+        "wrap": true,
+        "text": "當您點選立即前往開始活動時，系統將依隱私權政策存取您的 LINE 內部識別碼，參加本活動時請遵守 LINE 會議室使用條款。完整內容請參閱活動辦法。",
+        "size": "xs"
+      },
+      {
+        "type": "text",
+        "color": "#4587ff",
+        "text": "詳見活動辦法",
+        "size": "sm",
+        "margin": "sm",
+        "action": {
+          "type": "uri",
+          "label": "action",
+          "uri": "https://jack4215.github.io/article/event/ID010"
+        }
       }
     ],
     "spacing": "lg"
   },
   "footer": {
     "type": "box",
-    "layout": "horizontal",
+    "layout": "vertical",
     "contents": [
       {
         "type": "button",
         "style": "primary",
         "action": {
-          "type": "message",
-          "label": "正確",
-          "text": "第一題：O"
-        }
-      },
-      {
-        "type": "button",
-        "action": {
-          "type": "message",
-          "label": "錯誤",
-          "text": "第一題：X"
+          "type": "uri",
+          "label": "立即前往",
+          "uri": "https://line.me/R/meeting/76fb1e6332e9492cb2e1783b4ffab6aa"
         },
-        "style": "primary",
-        "color": "#FF3333"
+        "color": "#eeaacb"
       }
-    ],
-    "spacing": "lg"
+    ]
   }
 }
-         
+			 
   
 	        }]).then().catch(function(res) {})
 	     } else {
 	       alert("你的 LINE App 暫時不支援 Share Target Picker ，將開啟外部瀏覽器。")
 	       liff.openWindow({
-	         url: "https://jacklu15.github.io/LINEshare/eventnotice/003",
+	         url: "https://jacklu15.github.io/LINEshare/eventnotice/001",
 	         external: true
 	       });
 	     }
