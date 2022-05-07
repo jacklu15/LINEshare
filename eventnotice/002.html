@@ -34,11 +34,9 @@
    <script type="text/javascript">
       $(document).ready(function() {
          liff.init({liffId: "1656185375-Mp62g5Jw"}).then(() => {
-	       if (!liff.isInClient()) {
 	         if (!liff.isLoggedIn()) {
 	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/002"})
 	         }
-	       }
 	     })
 
 	   let code;
@@ -76,6 +74,35 @@
       },
       {
         "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "活動提醒",
+                "size": "xs",
+                "align": "center",
+                "color": "#ffffff"
+              }
+            ],
+            "flex": 6,
+            "backgroundColor": "#f5c005",
+            "spacing": "none",
+            "cornerRadius": "lg"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [],
+            "flex": 16
+          }
+        ]
+      },
+      {
+        "type": "box",
         "layout": "vertical",
         "contents": [
           {
@@ -105,14 +132,14 @@
                 "color": "#6C6C6C",
                 "text": "• 活動詳情：",
                 "size": "xs",
-                "flex": 4,
+                "flex": 8,
                 "wrap": true
               },
               {
                 "type": "text",
                 "text": "https://reurl.cc/zZZArV",
                 "size": "xs",
-                "flex": 10,
+                "flex": 19,
                 "action": {
                   "type": "uri",
                   "label": "action",
