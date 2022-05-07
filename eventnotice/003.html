@@ -34,11 +34,9 @@
    <script type="text/javascript">
       $(document).ready(function() {
          liff.init({liffId: "1656185375-Mp62g5Jw"}).then(() => {
-	       if (!liff.isInClient()) {
 	         if (!liff.isLoggedIn()) {
 	           liff.login({redirectUri: "https://jacklu15.github.io/LINEshare/eventnotice/003"})
 	         }
-	       }
 	     })
 
 	   let code;
