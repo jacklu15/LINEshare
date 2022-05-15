@@ -24,7 +24,7 @@
          <div class="col-xs-12">
             <p align="center"><button class="btn btn-success" type="button">FLEX Share Botton</button><br></p>
             <p></p>
-            <p align="center"><font size="3">筍伯♪｜虎福臨門迎新年</font></p>
+            <p align="center"><font size="3">隱私權政策更新</font></p>
          </div></div></div><font size="3">
 
 
@@ -53,29 +53,42 @@
 	       liff.shareTargetPicker([
 	         {
 	         "type": "flex",
-	         "altText": "請點我，查看完整訊息",
+	         "altText": "隱私權政策更新",
 	         "contents":
 
         {
   "type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": "https://jack4215.github.io/article/photo/event01001.jpg",
-    "size": "full",
-    "aspectRatio": "16:9",
-    "aspectMode": "cover"
-  },
   "body": {
     "type": "box",
     "layout": "vertical",
     "contents": [
       {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "image",
+            "align": "start",
+            "gravity": "center",
+            "size": "138px",
+            "url": "https://jack4215.github.io/article/photo/service_icon.jpeg"
+          }
+        ],
+        "height": "40px",
+        "paddingTop": "xs",
+        "position": "relative"
+      },
+      {
         "type": "text",
-        "text": "筍伯♪｜虎福臨門迎新年",
-        "size": "lg",
-        "color": "#000000",
+        "text": "隱私權政策更新",
+        "size": "xl",
+        "color": "#272727",
         "weight": "bold",
-        "wrap": true
+        "wrap": true,
+        "margin": "lg"
+      },
+      {
+        "type": "separator"
       },
       {
         "type": "box",
@@ -83,39 +96,21 @@
         "contents": [
           {
             "type": "text",
-            "color": "#6C6C6C",
             "wrap": true,
-            "text": "您已符合活動資格，完成活動將有機會獲得一卡通 Money 紅包、LINE POINTS 等好禮！",
-            "size": "sm"
+            "size": "15px",
+            "text": "本服務已於2022年6月19日更新隱私權政策。"
+          },
+          {
+            "type": "text",
+            "text": "若您不同意此次更新後之內容，請您立即中止使用並解除本服務之 LINE 連動。",
+            "wrap": true,
+            "size": "15px"
           }
         ],
         "spacing": "xs"
-      },
-      {
-        "type": "separator",
-        "color": "#6C6C6C"
-      },
-      {
-        "type": "text",
-        "color": "#6C6C6C",
-        "wrap": true,
-        "text": "當您點選立即前往開始活動時，系統將依隱私權政策存取您的 LINE 內部識別碼，參加本活動時請遵守 LINE 會議室使用條款。完整內容請參閱活動辦法。",
-        "size": "xs"
-      },
-      {
-        "type": "text",
-        "color": "#4587ff",
-        "text": "詳見活動辦法",
-        "size": "sm",
-        "margin": "sm",
-        "action": {
-          "type": "uri",
-          "label": "action",
-          "uri": "https://jack4215.github.io/article/event/ID010"
-        }
       }
     ],
-    "spacing": "lg"
+    "spacing": "md"
   },
   "footer": {
     "type": "box",
@@ -126,12 +121,21 @@
         "style": "primary",
         "action": {
           "type": "uri",
-          "label": "立即前往",
-          "uri": "https://line.me/R/meeting/76fb1e6332e9492cb2e1783b4ffab6aa"
+          "label": "參閱隱私權政策",
+          "uri": "https://jack4215.github.io/article/privacy-policy"
+        }
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "解除本服務連動",
+          "uri": "https://liff.line.me/1341301815-xV93aK9j/?channelId=1656185375"
         },
-        "color": "#eeaacb"
+        "height": "sm"
       }
-    ]
+    ],
+    "spacing": "lg"
   }
 }
 			 
